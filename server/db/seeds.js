@@ -1,0 +1,2 @@
+use dreamscapeDiary;
+db.dropDatabase();
