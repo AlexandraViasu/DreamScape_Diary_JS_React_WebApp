@@ -12,6 +12,9 @@ const DreamCard = ({dream, removeDream}) => {
         <>
             <h1>{dream.title}</h1>
             <p>{dream.body}</p>
+            <p>Lucid Dream: {dream.isLucidDream ? 'yes' : 'no'}</p>
+            <p>Nightmare: {dream.isNightmare ? 'yes' : 'no'}</p>
+            <p>Recurring: {dream.isRecurring ? 'yes' : 'no'}</p>
             <button onClick={handleDelete}> 🗑 </button>
             <hr></hr>
         </>

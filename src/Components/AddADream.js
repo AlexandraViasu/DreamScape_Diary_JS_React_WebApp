@@ -1,59 +1,160 @@
 import React, { useState } from "react";
 import { postDream } from "./DreamService"
 
-const AddADream = ({addDream}) => {
-    
+const AddADream = ({ addDream }) => {
   const [formData, setFormData] = useState({
-      title: "",
-      body: "",
-  })
-
-  const onChange = (event) =>{
-    const newFormData = Object.assign({}, formData);
+    title: "",
+    body: "",
+    isLucidDream: false,
+    isNightmare: false,
+    isRecurring: false,
+  });
+  const onChange = (event) => {
+    const newFormData = { ...formData };
     newFormData[event.target.name] = event.target.value;
     setFormData(newFormData);
-  }
-
-  const onSubmit = (event) =>{
+  };
+  const onSubmit = (event) => {
     event.preventDefault();
-    postDream(formData).then((data)=>{
-        addDream(data);
-    })
-    setFormData({
-        title: "",
-        body: "",
+    postDream(formData).then((data) => {
+      addDream(data);
     });
-}
-
-return (
-  <form onSubmit={onSubmit} id="dream-form" >
+    setFormData({
+      title: "",
+      body: "",
+      isLucidDream: false,
+      isNightmare: false,
+      isRecurring: false,
+    });
+  };
+  return (
+    <form onSubmit={onSubmit} id="dream-form">
       <h2>Add a Dream</h2>
       <div className="formWrap">
-          <label htmlFor="title">Title:</label>
-          <input 
-              onChange={onChange} 
-              type="text" 
-              id="title" 
-              name="title"
-              value={formData.title} />
+        <label htmlFor="title">Title:</label>
+        <input
+          onChange={onChange}
+          type="text"
+          id="title"
+          name="title"
+          value={formData.title}
+        />
       </div>
       <div className="formWrap">
-          <label htmlFor="body">Body:</label>
-          <input 
-              onChange={onChange} 
-              type="text" 
-              id="body" 
-              name="body"
-              value={formData.body} />
+        <label htmlFor="body">Body:</label>
+        <input
+          onChange={onChange}
+          type="text"
+          id="body"
+          name="body"
+          value={formData.body}
+        />
       </div>
-
-      <input type="submit" value="Save" id="save"/>
-</form>
-
-);
-}
-
+      <div className="formWrap">
+        <label>Lucid Dream:</label>
+        <button
+          type="button"
+          onClick={() =>
+            setFormData({ ...formData, isLucidDream: !formData.isLucidDream })
+          }
+        >
+          {formData.isLucidDream ? 'ON' : 'OFF'}
+        </button>
+      </div>
+      <div className="formWrap">
+       
+        <label>Nightmare:</label>
+        <button
+          type="button"
+          onClick={() =>
+            setFormData({ ...formData, isNightmare: !formData.isNightmare })
+          }
+        >
+          {formData.isNightmare ? 'ON' : 'OFF'}
+        </button>
+      
+      </div>
+      <div className="formWrap">
+        <label>Recurring:</label>
+        <button
+          type="button"
+          onClick={() =>
+            setFormData({ ...formData, isRecurring: !formData.isRecurring })
+          }
+        >
+          {formData.isRecurring ? 'ON' : 'OFF'}
+        </button>
+      </div>
+      <input type="submit" value="Save" id="save" />
+    </form>
+  );
+};
 export default AddADream;
+
+// const AddADream = ({addDream}) => {
+    
+//   const [formData, setFormData] = useState({
+//       title: "",
+//       body: "",
+//   })
+
+//   const onChange = (event) =>{
+//     const newFormData = Object.assign({}, formData);
+//     newFormData[event.target.name] = event.target.value;
+//     setFormData(newFormData);
+//   }
+
+//   const onSubmit = (event) =>{
+//     event.preventDefault();
+//     postDream(formData).then((data)=>{
+//         addDream(data);
+//     })
+//     setFormData({
+//         title: "",
+//         body: "",
+//     });
+// }
+
+// return (
+//   <form onSubmit={onSubmit} id="dream-form" >
+//       <h2>Add a Dream</h2>
+//       <div className="formWrap">
+//           <label htmlFor="title">Title:</label>
+//           <input 
+//               onChange={onChange} 
+//               type="text" 
+//               id="title" 
+//               name="title"
+//               value={formData.title} />
+//       </div>
+//       <div className="formWrap">
+//           <label htmlFor="body">Body:</label>
+//           <input 
+//               onChange={onChange} 
+//               type="text" 
+//               id="body" 
+//               name="body"
+//               value={formData.body} />
+//       </div>
+//       <label>Lucid Dream:</label>
+//         <button type="button" onClick={handleLucidDreamToggle}>
+//           {isLucidDream ? 'ON' : 'OFF'}
+//         </button>
+//         <label>Nightmare:</label>
+//         <button type="button" onClick={handleNightmareToggle}>
+//           {isNightmare ? 'ON' : 'OFF'}
+//         </button>
+//         <label>Recurring:</label>
+//         <button type="button" onClick={handleRecurringToggle}>
+//           {isRecurring ? 'ON' : 'OFF'}
+//         </button>
+//       <input type="submit" value="Save" id="save"/>
+// </form>
+
+// );
+// }
+
+// export default AddADream;
 
 // function App() {
 //     const [dreams, setDreams] = useState([]);
