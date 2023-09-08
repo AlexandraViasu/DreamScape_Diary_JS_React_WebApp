@@ -44,7 +44,7 @@ return (
     <Route path="/home" element={<Homepage />} />
     <Route path="/addadream" element={<AddADream addDream={addDream} />}  />
     <Route path="/dreamjournal" element={<DreamJournal dreams={dreams} removeDream={removeDream} />} />
-    <Route path="/stats" element={<Stats />}  />
+    <Route path="/stats" element={<Stats dreams={dreams}/>}  />
     <Route path="/*" element={<ErrorPage />} />
 </Routes>
 
