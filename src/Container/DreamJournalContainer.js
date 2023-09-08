@@ -6,7 +6,8 @@ import Homepage from "../Components/Homepage";
 import Stats from "../Components/Stats";
 import AddADream from "../Components/AddADream";
 import DreamJournal from "../Components/DreamJournal";
-import { getDream } from "../Components/DreamService"
+import { getDream } from "../Components/DreamService";
+import "./DreamJournalContainer.css";
 
     
 const DreamJournalContainer = () => {
