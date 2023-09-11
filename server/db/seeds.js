@@ -7,6 +7,7 @@ db.dreams.insertMany([
         isLucidDream: false,
         isNightmare: false,
         isRecurring: false,
+        date: "07 August 2023 at 08:05 am"
     },
     {
         title: "Cats!",
@@ -14,6 +15,7 @@ db.dreams.insertMany([
         isLucidDream: false,
         isNightmare: false,
         isRecurring: true,
+        date: "08 August 2023 at 07:45 am"
     },
     {
         title: "Falling",
@@ -21,5 +23,6 @@ db.dreams.insertMany([
         isLucidDream: false,
         isNightmare: true,
         isRecurring: false,
+        date: "09 August 2023 at 08:14 am"
     }
 ]);

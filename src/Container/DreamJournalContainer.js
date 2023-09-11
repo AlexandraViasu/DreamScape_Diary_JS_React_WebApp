@@ -29,31 +29,27 @@ const DreamJournalContainer = () => {
     setDreams(dreamsToKeep);
   }
 
-return (
-
-<Router>
-
-<div className='parent'>
-<header className='header'>
-    <Link className='header' to="/home">Dreamscape Diary </Link>
-    <Link className='header' to="/addadream">Add A New Dream </Link>
-    <Link className='header' to="/dreamjournal">Dream Journal </Link>
-    <Link className='header' to="/stats">Dream Statistics </Link>
-</header>
-
-<Routes>
-    <Route path="/home" element={<Homepage />} />
-    <Route path="/addadream" element={<AddADream addDream={addDream} />}  />
-    <Route path="/dreamjournal" element={<DreamJournal dreams={dreams} removeDream={removeDream} />} />
-    <Route path="/stats" element={<Stats dreams={dreams}/>}  />
-    <Route path="/*" element={<ErrorPage />} />
-</Routes>
-
-<footer className='footer'>Made with 💜 by the Party Wizard's Fanclub</footer>
-</div>
-
-</Router>
-  );
+  return (
+    <Router>
+    <div className='parent'>
+    <Routes>
+        <Route path="/home" element={<Homepage />} />
+        <Route path="/addadream" element={<AddADream addDream={addDream} />}  />
+        <Route path="/dreamjournal" element={<DreamJournal dreams={dreams} removeDream={removeDream} />} />
+        <Route path="/stats" element={<Stats dreams={dreams}/>}  />
+        <Route path="/*" element={<ErrorPage />} />
+    </Routes>
+    <footer>
+      <div class="footer-container">
+              <Link className='button-50' to="/home">Dreamscape Diary </Link>
+              <Link className='button-50' to="/addadream">Add A New Dream </Link>
+              <Link className='button-50' to="/dreamjournal">Dream Journal </Link>
+              <Link className='button-50' to="/stats">Dream Statistics </Link>
+      </div>
+    </footer>
+    </div>
+    </Router>
+      );
 }
 
 export default DreamJournalContainer;
