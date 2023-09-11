@@ -1,13 +1,26 @@
 import React, { useState } from "react";
 import { postDream } from "./DreamService"
+import DatePicker from "react-datepicker";
+
+import "react-datepicker/dist/react-datepicker.css";
 
 const AddADream = ({ addDream }) => {
+  const [startDate, setStartDate] = useState(new Date());
+  const formattedDate = startDate.toLocaleString(undefined, {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    hour12: true,
+  });
   const [formData, setFormData] = useState({
     title: "",
     body: "",
     isLucidDream: false,
     isNightmare: false,
     isRecurring: false,
+    date: formattedDate
   });
   const onChange = (event) => {
     const newFormData = { ...formData };
@@ -25,6 +38,7 @@ const AddADream = ({ addDream }) => {
       isLucidDream: false,
       isNightmare: false,
       isRecurring: false,
+      date: formattedDate
     });
   };
   return (
@@ -85,6 +99,11 @@ const AddADream = ({ addDream }) => {
           {formData.isRecurring ? 'ON' : 'OFF'}
         </button>
       </div>
+      <DatePicker
+      selected={startDate}
+      onChange={(date) => setStartDate(date)}
+      dateFormat="dd MMMM yyyy h:mm a"
+      showTimeInput/>
       <input type="submit" value="Save" id="save" />
     </form>
   );
