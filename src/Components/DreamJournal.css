@@ -85,7 +85,7 @@ html {
   font-size: 12px;
 }
 
-body {
+/* body { */
   /* height: 100vh;
   display: flex;
   justify-content: center;
@@ -94,7 +94,7 @@ body {
   /* background: #1488cc; */
   /* background: -webkit-linear-gradient(to right, #2b32b2, #1488cc);
   background: linear-gradient(to right, #2b32b2, #1488cc); */
-}
+/* } */
 
 .blog_post {
   background: #979DAC;
@@ -134,8 +134,8 @@ img {
 }
 
 h3 {
-  margin: 0 0 0.5rem 0;
-  color: #999;
+  margin: 2rem 0 2rem 0;
+  color: #333;
   font-size: 1.25rem;
 }
 
@@ -144,6 +144,7 @@ h1 {
   font-size: 2.5rem;
   letter-spacing: 0.5px;
   color: #333;
+  text-align: left;
 }
 
 p {
