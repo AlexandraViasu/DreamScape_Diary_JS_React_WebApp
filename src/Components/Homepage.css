@@ -1,0 +1,36 @@
+
+
+.homepage-container {
+    display: flex;
+    background-color: black; 
+    color: #979DAC; 
+    padding: 20px; 
+
+   
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+  }
+  
+
+  
+.gif-container {
+flex: 2; 
+}
+
+.text-homepage{
+    padding-left: 1rem;
+    font-family: cursive, sans-serif;
+    font-weight: normal; 
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.title-homepage {
+    text-align: center;
+}
+
+  
+
+  
+  
