@@ -1,7 +1,6 @@
 # Dreamscape Diary App
 
-https://github.com/AlexandraViasu/DreamScape_Diary_JS_React_WebApp/assets/130513545/b0a2fae5-3b7f-4a42-bb3a-cfe800808df7
-
+https://github.com/AlexandraViasu/DreamScape_Diary_JS_React_WebApp/assets/130513545/fe53f244-1682-4e11-86e7-c087cb7db8fe
 
 ## Overview
 
