@@ -41,17 +41,10 @@ const DreamJournalContainer = () => {
     </Routes>
     <footer>
       <div class="footer-container">
-<<<<<<< HEAD
               <Link className='button-50' to="/home">🌠 Dreamscape Diary </Link>
               <Link className='button-50' to="/addadream">😴 Add A New Dream </Link>
               <Link className='button-50' to="/dreamjournal">📖 Dream Journal </Link>
               <Link className='button-50' to="/stats">📊 Dream Statistics </Link>
-=======
-              <Link className='button-50' to="/home">Dreamscape Diary </Link>
-              <Link className='button-50' to="/addadream">Add A New Dream </Link>
-              <Link className='button-50' to="/dreamjournal">Dream Journal </Link>
-              <Link className='button-50' to="/stats">Dream Statistics </Link>
->>>>>>> 668a96883209e6cdd817c23cd4c225838eda3ec7
       </div>
     </footer>
     </div>

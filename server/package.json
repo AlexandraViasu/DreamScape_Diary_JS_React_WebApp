@@ -5,12 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server:dev": "nodemon server.js",
-<<<<<<< HEAD
     "seeds": "mongosh < db/seeds.js",
     "start": "node server.js"
-=======
-    "seeds": "mongosh < db/seeds.js"
->>>>>>> 668a96883209e6cdd817c23cd4c225838eda3ec7
   },
   "keywords": [],
   "author": "",
