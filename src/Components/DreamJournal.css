@@ -134,8 +134,8 @@ html {
 }
 
 h3 {
-  margin: 0 0 0.5rem 0;
-  color: #999;
+  margin: 2rem 0 2rem 0;
+  color: #333;
   font-size: 1.25rem;
 }
 
@@ -144,6 +144,7 @@ h1 {
   font-size: 2.5rem;
   letter-spacing: 0.5px;
   color: #333;
+  text-align: left;
 }
 
 p {
