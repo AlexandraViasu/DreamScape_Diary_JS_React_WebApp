@@ -56,7 +56,7 @@ const Statistics = ({dream}) => {
   }, []);
   return (
     <>
-      <h1>Your Dream Stats 🛌🏽</h1>
+      <h1 className='stats-title'>Your Dream Stats 🛌🏽</h1>
       <div id="container" style={{ width: '100%', height: '400px' }}></div>
     </>
   );

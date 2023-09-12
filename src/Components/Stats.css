@@ -8,7 +8,7 @@ body {
     background-color: black; 
   }
   
-  h1 {
+.stats-title {
     text-align: center;
     color: #979DAC;
     margin-top: 20px; 

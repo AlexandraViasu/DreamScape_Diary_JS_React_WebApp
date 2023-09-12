@@ -43,7 +43,7 @@ const AddADream = ({ addDream }) => {
     });
   };
   return (
-    <form onSubmit={onSubmit} id="dream-form">
+    <form onSubmit={onSubmit} className='addADream' id="dream-form">
       <h2>Add a Dream 💤</h2>
       <div className="formWrap">
         <label htmlFor="title">Title:</label>

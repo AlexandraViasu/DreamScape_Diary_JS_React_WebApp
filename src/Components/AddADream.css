@@ -4,7 +4,7 @@ body {
     height: 100vh; 
 }
 
-#dream-form {
+.addADream {
 
     align-items: center;
     max-width: 100%;
@@ -15,9 +15,10 @@ body {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-right: 0px;
+    margin-left: 20px;
   }
   .formWrap {
-
+    font-size: 16px;
     height: 80px;
   }
  

@@ -14,20 +14,25 @@
   
 
   
-.gif-container {
-flex: 2; 
+
+
+.homepage-image {
+
+    max-width: fit-content;
 }
 
-.text-homepage{
+.homepage-p{
     padding-left: 1rem;
     font-family: cursive, sans-serif;
     font-weight: normal; 
-    font-size: 1.1em;
+    font-size: 1.5em;
+    color: #979DAC; 
     text-align: center;
 }
 
 .title-homepage {
     text-align: center;
+    color: #979DAC; 
 }
 
   

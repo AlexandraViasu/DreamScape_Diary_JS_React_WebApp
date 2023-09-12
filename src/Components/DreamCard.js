@@ -18,7 +18,7 @@ const DreamCard = ({dream, removeDream}) => {
             </style>
                 <div class="blog_post">
                     <div class="img_pod">
-                        <img src="/user_picture.jpg" alt="User Picture"/>
+                        <img className="journal" src="/user_picture.jpg" alt="User Picture"/>
                     </div>
                     <div class="container_copy">
                     <h3><b>Date:</b> {dream.date}</h3>
