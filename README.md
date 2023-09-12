@@ -20,10 +20,35 @@ Organize your dreams by using our tags. Easily view specific tagged dreams or re
 
 All your dreams are stored safely for you to revisit at a later date.
 
+### 4. Dream Stats
 
+<img width="1168" alt="Screenshot at Sep 12 15-00-30" src="https://github.com/AlexandraViasu/DreamScape_Diary_JS_React_WebApp/assets/130513545/5ffc901e-c10a-4aaa-95e8-5b9d7e094365">
+
+
+We display stats based on the category of dreams you entered. Check our nerd stats and see how many times have you had a nightmare!
 
 ### 5. Open Source
 
 Dreamscape Diary App is an open-source project, welcoming contributions from developers worldwide. Join the community and help improve the app's features and functionality.
 
+## Getting Started
 
+To get started with Dreamscape Diary App, follow these simple steps:
+
+1. Clone the repository.
+2. Install the necessary dependencies:
+   `npm install` (both for the server and src folder)
+3. Build and run the app:
+   `npm start`
+4. Begin documenting your dreams and exploring your subconscious mind!
+
+
+## Contributing
+
+We welcome contributions from developers, designers, and dream enthusiasts. Whether you want to improve the app's codebase, enhance the user interface, or suggest new features, please DM us on LinkedIN: [Alex](https://www.linkedin.com/in/alexandra-viasu/) or [Chris](https://www.linkedin.com/in/chrisbelseymusic/)
+
+## Contact
+
+For questions or suggestions, please reach out anytime.
+
+Start exploring the fascinating world of your dreams with Dreamscape Diary App today! Happy dream journaling! 🌙✨
