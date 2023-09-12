@@ -6,7 +6,11 @@
 }
 .button-50 {
   appearance: button;
+<<<<<<< HEAD
   background-color: #023E7D;
+=======
+  background-color: #33415C;
+>>>>>>> 668a96883209e6cdd817c23cd4c225838eda3ec7
   background-image: none;
   border: 1px solid #33415C;
   border-radius: 4px;

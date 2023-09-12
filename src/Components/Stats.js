@@ -45,6 +45,23 @@ const Statistics = ({dream}) => {
             },
           ],
         };
+<<<<<<< HEAD
+=======
+        //   series: [
+        //     {
+        //       name: 'Is Lucid Dream',
+        //       data: data.map((dream) => dream.isLucidDream ? 1 : 0),
+        //     },
+        //     {
+        //       name: 'Is Nightmare',
+        //       data: data.map((dream) => dream.isNightmare ? 1 : 0),
+        //     },
+        //     {
+        //       name: 'Is Recurring',
+        //       data: data.map((dream) => dream.isRecurring ? 1 : 0),
+        //     },
+        //   ],
+>>>>>>> 668a96883209e6cdd817c23cd4c225838eda3ec7
         Highcharts.chart('container', options);
       })
       .catch((error) => {
