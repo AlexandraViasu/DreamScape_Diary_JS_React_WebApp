@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Highcharts from 'highcharts';
 import axios from 'axios';
+import './Stats.css';
+
+
 const Statistics = ({dream}) => {
   const [chartData, setChartData] = useState([]);
   useEffect(() => {
@@ -17,29 +20,29 @@ const Statistics = ({dream}) => {
             type: 'bar',
         },
         title: {
-            text: 'Dream Statistics',
+            text: 'Explore your dream statistics, including lucid dreams, nightmares, and recurring dreams, beautifully visualized on our website.',
         },
         xAxis: {
-            categories: ["Dreams"],
+            categories: ["Type of Dreams"],
         },
         yAxis: {
             title: {
-            text: 'Occurrences',
+            text: 'Number of Dreams',
             },
         },
         series: [
             {
-              name: 'Is Lucid Dream',
+              name: 'Lucid Dream',
               data: [lucidDreamCount],
               color: colors[0],
             },
             {
-              name: 'Is Nightmare',
+              name: 'Nightmare',
               data: [nightmareCount],
               color: colors[1],
             },
             {
-              name: 'Is Recurring',
+              name: 'Recurring',
               data: [recurringCount],
               color: colors[2],
             },
@@ -53,7 +56,7 @@ const Statistics = ({dream}) => {
   }, []);
   return (
     <>
-      <h1>Your Dream Stats!</h1>
+      <h1>Your Dream Stats 🛌🏽</h1>
       <div id="container" style={{ width: '100%', height: '400px' }}></div>
     </>
   );

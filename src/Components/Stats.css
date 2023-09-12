@@ -1,0 +1,26 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    background-color: black; 
+  }
+  
+  h1 {
+    text-align: center;
+    color: #979DAC;
+    margin-top: 20px; 
+  }
+  
+  #container {
+    width: 100%;
+    max-width: 1200px; 
+    height: 400px;
+    margin: 20px auto; 
+    background-color: black; 
+    padding-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  }
+  
