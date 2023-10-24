@@ -23,4 +23,14 @@ body {
     padding-bottom: 30px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   }
+
+  #piechart {
+    width: 100%;
+    max-width: 1200px; 
+    height: 400px;
+    margin: 20px auto; 
+    background-color: black; 
+    padding-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  }
   
