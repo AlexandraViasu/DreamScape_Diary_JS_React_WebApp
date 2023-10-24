@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react';
 import Highcharts from 'highcharts';
 import axios from 'axios';
 import './Stats.css';
+import Glide from '@glidejs/glide';
 
 
 const Statistics = ({dream}) => {
   const [chartData, setChartData] = useState([]);
+  const [showPieChart, setShowPieChart] = useState(false);
   useEffect(() => {
     axios.get('http://localhost:9000/api/dreamscapeDiary/')
       .then((response) => {
@@ -120,14 +122,46 @@ const Statistics = ({dream}) => {
       // });
     })}, []);
 
+    useEffect(() => {
+      const glide = new Glide('.glide').mount();
+      glide.on('run.before', (event) => {
+        if (event.direction === '<') {
+          setShowPieChart(true);
+        } else {
+          setShowPieChart(false);
+        }
+      });
+    }, []);
+    
   return (
     <>
       
       <h1 className='stats-title'>Your Dream Stats 🛌🏽</h1>
-      <div id="container" style={{ width: '100%', height: '400px' }}></div>
-      <div id="piechart" style={{ width: '100%', height: '400px' }}></div>
-    </>
+      <div className="glide">
+        <div className="glide__track" data-glide-el="track">
+          <ul className="glide__slides">
+            <li className={`glide__slide ${showPieChart ? 'hidden' : ''}`}>
+              <div id="container" style={{ width: '100%', height: '400px' }}></div>
+            </li>
+            <li className={`glide__slide ${showPieChart ? '' : 'hidden'}`}>
+              <div id="piechart" style={{ width: '100%', height: '400px' }}></div>
+            </li>
+          </ul>
+        </div>
+        <div className="glide__arrows" data-glide-el="controls">
+          <button className="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+          <button className="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+        </div>
+      </div>
+    
+      
+          {/* <div id="container" style={{ width: '100%', height: '400px' }}></div>
+          <div id="piechart" style={{ width: '100%', height: '400px' }}></div> */}
+         
+  </>
   );
+    
+
 
 }
 export default Statistics;
