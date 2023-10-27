@@ -1,36 +1,65 @@
-
 body {
-    margin: 0;
-    padding: 0;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 100vh;
-    background-color: black; 
-  }
-  
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  background-color: black;
+ }
 .stats-title {
-    text-align: center;
-    color: #979DAC;
-    margin-top: 20px; 
-  }
-  
-  #container {
-    width: 100%;
-    max-width: 1200px; 
-    height: 400px;
-    margin: 20px auto; 
-    background-color: black; 
-    padding-bottom: 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-  }
-
-  #piechart {
-    width: 100%;
-    max-width: 1200px; 
-    height: 400px;
-    margin: 20px auto; 
-    background-color: black; 
-    padding-bottom: 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-  }
+  text-align: center;
+  color: #979DAC;
+  margin-top: 20px;
+ }
+ #container {
+  width: 100%;
+  max-width: 1200px;
+  height: 400px;
+  margin: 20px auto;
+  background-color: black;
+  padding-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ }
+ #piechart {
+  width: 100%;
+  max-width: 1200px;
+  height: 400px;
+  margin: 20px auto;
+  background-color: black;
+  padding-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ }
+ .glide__slides {
+  display: flex;
+  align-items: flex-start;
+ }
+ .glide__slide {
+  flex: 0 0 100%;
+ }
+ .glide__arrows {
+  position: absolute;
+  top: 60%; /* Position vertically in the middle of the parent container */
+  transform: translateY(-50%); /* Vertically center the buttons */
+  display: flex;
+  justify-content: center; /* Space the buttons on the sides */
+  align-items: center;
+  width: 100%; /* Make the buttons span the entire width */
+ }
+ .glide__arrow {
+  background-color: #007bff95; /* Background color for the buttons */
+  color: #fff; /* Text color for the buttons */
+  border: none;
+  border-radius: 50%; /* Make the buttons circular */
+  width: 40px; /* Set the button width */
+  height: 40px; /* Set the button height */
+  font-size: 36px; /* Adjust font size */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Add a transition effect on hover */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ .glide__arrow:hover {
+  background-color: #0056B3; /* Change the background color on hover */
+ }
   
