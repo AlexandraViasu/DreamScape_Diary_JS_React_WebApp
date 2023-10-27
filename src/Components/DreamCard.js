@@ -25,10 +25,17 @@ const DreamCard = ({dream, removeDream}) => {
                     <h1 style={{ fontFamily: 'Caprasimo, cursive' }}>{dream.title}</h1>
                     <p style={{ fontFamily: 'Pacifico, cursive' }}>{dream.body}.</p>
                     <div className='tags-dreamjournal'>
+                                <li><span>{dream.hasAnimals ? '#Animals' : ''}</span></li>
+                                <li><span>{dream.hasHumans ? '#Humans' : ''}</span></li>
+                                <li><span>{dream.hasWorkPlace ? '#BeingAtWork' : ''}</span></li>
+                                <li><span>{dream.hasSchool ? '#BeingAtSchool' : ''}</span></li>
+                                <li><span>{dream.hasFood ? '#Food' : ''}</span></li>
+                                <li><span>{dream.hasHome ? '#BeingAtHome' : ''}</span></li>
                             <ul class="nav">
                                 <li><b>Lucid Dream:</b> <span>{dream.isLucidDream ? '✅' : '❌'}</span></li>
                                 <li><b>Nightmare:</b> <span>{dream.isNightmare ? '✅' : '❌'}</span></li>
                                 <li><b>Recurring:</b> <span>{dream.isRecurring ? '✅' : '❌'}</span></li>
+                                
                             </ul>
                         </div>
                     <a class="btn_primary" onClick={handleDelete}> 🗑 </a>

@@ -18,6 +18,12 @@ const AddADream = ({ addDream }) => {
   const [formData, setFormData] = useState({
     title: "",
     body: "",
+    hasAnimals: false,
+    hasHumans: false,
+    hasWorkPlace: false,
+    hasSchool: false,
+    hasFood: false,
+    hasHome: false,
     isLucidDream: false,
     isNightmare: false,
     isRecurring: false,
@@ -36,12 +42,24 @@ const AddADream = ({ addDream }) => {
     setFormData({
       title: "",
       body: "",
+      hasAnimals: false,
+      hasHumans: false,
+      hasWorkPlace: false,
+      hasSchool: false,
+      hasFood: false,
+      hasHome: false,
       isLucidDream: false,
       isNightmare: false,
       isRecurring: false,
       date: formattedDate
     });
   };
+  const toggleCheckbox = (choice) => {
+    const updatedData = { ...formData };
+    updatedData[choice] = !formData[choice];
+    setFormData(updatedData);
+  };
+
   return (
     <form onSubmit={onSubmit} className='addADream' id="dream-form">
       <h2>Add a Dream 💤</h2>
@@ -55,6 +73,7 @@ const AddADream = ({ addDream }) => {
           value={formData.title}
         />
       </div>
+
       <div className="formWrap">
         <label htmlFor="body">Write as many details as you remember:</label>
         <input
@@ -65,6 +84,65 @@ const AddADream = ({ addDream }) => {
           value={formData.body}
         />
       </div>
+
+      <label className="formWrap">Please choose one of the tags below, if any are applicable.</label>
+      
+       <form className="mchoice">
+          <input
+            className="mchoice"
+            type="checkbox"
+            name="choice"
+            value="hasAnimals"
+            onClick={() => toggleCheckbox("hasAnimals")}
+            checked={formData.hasAnimals}
+          />Animals
+
+          <input
+            className="mchoice"
+            type="checkbox"
+            name="choice"
+            value="hasHumans"
+            onClick={() => toggleCheckbox("hasHumans")}
+            checked={formData.hasHumans}
+          />People
+
+          <input
+            className="mchoice"
+            type="checkbox"
+            name="choice"
+            value="hasWorkPlace"
+            onClick={() => toggleCheckbox("hasWorkPlace")}
+            checked={formData.hasWorkPlace}
+          />Being at Work
+          
+          <input
+            className="mchoice"
+            type="checkbox"
+            name="choice"
+            value="hasSchool"
+            onClick={() => toggleCheckbox("hasSchool")}
+            checked={formData.hasSchool}
+          />Being at School
+          
+          <input
+            className="mchoice"
+            type="checkbox"
+            name="choice"
+            value="hasFood"
+            onClick={() => toggleCheckbox("hasFood")}
+            checked={formData.hasFood}
+          />Food
+          
+          <input
+            className="mchoice"
+            type="checkbox"
+            name="choice"
+            value="hasHome"
+            onClick={() => toggleCheckbox("hasHome")}
+            checked={formData.hasHome}
+          />Being at Home
+          </form>
+
       <div className="formWrap">
         <label>Lucid Dream:</label>
         <button className="button-tags"
@@ -76,15 +154,13 @@ const AddADream = ({ addDream }) => {
           <span>{formData.isLucidDream ? "✅" : '❌'}</span>
         </button>
       </div>
+
       <div className="formWrap">
-       
         <label>Nightmare:</label>
         <button className="button-tags"
           type="button"
           onClick={() =>
-            setFormData({ ...formData, isNightmare: !formData.isNightmare })
-          }
-        >
+            setFormData({ ...formData, isNightmare: !formData.isNightmare })}>
           <span>{formData.isNightmare ? '✅' : '❌'}</span>
         </button>
       
@@ -94,12 +170,11 @@ const AddADream = ({ addDream }) => {
         <button className="button-tags"
           type="button"
           onClick={() =>
-            setFormData({ ...formData, isRecurring: !formData.isRecurring })
-          }
-        >
+            setFormData({ ...formData, isRecurring: !formData.isRecurring })}>
           <span>{formData.isRecurring ? '✅' : '❌'}</span>
         </button>
       </div>
+
       <DatePicker
       selected={startDate}
       onChange={(date) => setStartDate(date)}

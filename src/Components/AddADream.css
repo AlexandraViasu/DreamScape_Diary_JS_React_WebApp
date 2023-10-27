@@ -96,3 +96,13 @@ body {
     color: #979DAC;
   }
   
+  .mchoice {
+    color: #979DAC;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: normal;
+    padding-top: 2%;
+    margin-bottom: 2%;
+    justify-content: space-between; 
+}
