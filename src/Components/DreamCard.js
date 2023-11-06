@@ -28,20 +28,28 @@ return (
             <h1 style={{ fontFamily: 'Caprasimo, cursive' }}>{dream.title}</h1>
             <p style={{ fontFamily: 'Pacifico, cursive' }}>{dream.body}.</p>
             
+            {dream.hasAnimals ||
+            dream.hasHumans ||
+            dream.hasWorkPlace ||
+            dream.hasSchool ||
+            dream.hasFood ||
+            dream.hasHome ? (
             <div className='tags-dreamjournal'>
-                <li><span>{dream.hasAnimals ? '#Animals' : ''}</span></li>
-                <li><span>{dream.hasHumans ? '#Humans' : ''}</span></li>
-                <li><span>{dream.hasWorkPlace ? '#BeingAtWork' : ''}</span></li>
-                <li><span>{dream.hasSchool ? '#BeingAtSchool' : ''}</span></li>
-                <li><span>{dream.hasFood ? '#Food' : ''}</span></li>
-                <li><span>{dream.hasHome ? '#BeingAtHome' : ''}</span></li>
+              {dream.hasAnimals && <li><span>#Animals</span></li>}
+              {dream.hasHumans && <li><span>#Humans</span></li>}
+              {dream.hasWorkPlace && <li><span>#BeingAtWork</span></li>}
+              {dream.hasSchool && <li><span>#BeingAtSchool</span></li>}
+              {dream.hasFood && <li><span>#Food</span></li>}
+              {dream.hasHome && <li><span>#BeingAtHome</span></li>}
+            </div>
+            ) : null}
             <ul class="nav">
                 <li><b>Lucid Dream:</b> <span>{dream.isLucidDream ? '✅' : '❌'}</span></li>
                 <li><b>Nightmare:</b> <span>{dream.isNightmare ? '✅' : '❌'}</span></li>
                 <li><b>Recurring:</b> <span>{dream.isRecurring ? '✅' : '❌'}</span></li>
                 
             </ul>
-            </div>
+            
             <a class="btn_primary" onClick={handleDelete}> 🗑 </a>
             </div>
         </div>

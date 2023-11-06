@@ -44,7 +44,7 @@ body {
 
 .glide__arrows {
   position: absolute;
-  top: 60%; 
+  top: 88%; 
   transform: translateY(-50%); 
   display: flex;
   justify-content: center; 

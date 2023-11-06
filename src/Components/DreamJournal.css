@@ -10,9 +10,32 @@
 
 .tags-dreamjournal {
   color: #001233;
-  display: inline;
-  list-style: none;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
 }
+
+.tags-dreamjournal li {
+  margin: 5px;
+  padding: 5px;
+  background-color: #7D8597; 
+  border-radius: 5px; 
+}
+
+.tags-dreamjournal span {
+  font-weight: bold;
+  color: #001845; 
+  padding: 2px 4px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.tags-dreamjournal li:hover {
+  background-color: #448acf; 
+  transform: scale(1.1); 
+  transition: all 0.3s ease; 
+}
+
 
 ul.nav {
   background: linear-gradient(90deg, #0466C8, #0353A4);
@@ -107,7 +130,7 @@ h1 {
 }
 
 p {
-  margin: 0 0 4.5rem 0;
+  margin: 0 0 2.5rem 0;
   font-size: 1.5rem;
   line-height: 1.45;
   color: #333;
