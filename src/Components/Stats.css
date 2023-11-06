@@ -5,13 +5,15 @@ body {
   justify-content: space-between;
   min-height: 100vh;
   background-color: black;
- }
+}
+
 .stats-title {
   text-align: center;
   color: #979DAC;
   margin-top: 20px;
- }
- #container {
+}
+
+#container {
   width: 100%;
   max-width: 1200px;
   height: 400px;
@@ -19,8 +21,9 @@ body {
   background-color: black;
   padding-bottom: 30px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
- }
- #piechart {
+}
+
+#piechart {
   width: 100%;
   max-width: 1200px;
   height: 400px;
@@ -28,38 +31,42 @@ body {
   background-color: black;
   padding-bottom: 30px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
- }
- .glide__slides {
+}
+
+.glide__slides {
   display: flex;
   align-items: flex-start;
- }
- .glide__slide {
+}
+
+.glide__slide {
   flex: 0 0 100%;
- }
- .glide__arrows {
+}
+
+.glide__arrows {
   position: absolute;
-  top: 60%; /* Position vertically in the middle of the parent container */
-  transform: translateY(-50%); /* Vertically center the buttons */
+  top: 60%; 
+  transform: translateY(-50%); 
   display: flex;
-  justify-content: center; /* Space the buttons on the sides */
+  justify-content: center; 
   align-items: center;
-  width: 100%; /* Make the buttons span the entire width */
- }
- .glide__arrow {
-  background-color: #007bff95; /* Background color for the buttons */
-  color: #fff; /* Text color for the buttons */
+  width: 100%; 
+}
+
+.glide__arrow {
+  background-color: #007bff95; 
+  color: #fff; 
   border: none;
-  border-radius: 50%; /* Make the buttons circular */
-  width: 40px; /* Set the button width */
-  height: 40px; /* Set the button height */
-  font-size: 36px; /* Adjust font size */
+  border-radius: 50%; 
+  width: 40px; 
+  height: 40px; 
+  font-size: 36px; 
   cursor: pointer;
-  transition: background-color 0.3s; /* Add a transition effect on hover */
+  transition: background-color 0.3s; 
   display: flex;
   align-items: center;
   justify-content: center;
- }
- .glide__arrow:hover {
-  background-color: #0056B3; /* Change the background color on hover */
- }
-  
+}
+
+.glide__arrow:hover {
+  background-color: #0056B3; 
+}

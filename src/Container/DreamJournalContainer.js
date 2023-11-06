@@ -11,25 +11,24 @@ import "./DreamJournalContainer.css";
 
     
 const DreamJournalContainer = () => {
+const [dreams, setDreams] = useState([]);
 
-    const [dreams, setDreams] = useState([]);
+useEffect(() => {
+  getDream().then((allDreams) => {
+    setDreams(allDreams);
+  })
+}, []);
 
-  useEffect(() => {
-    getDream().then((allDreams) => {
-      setDreams(allDreams);
-    })
-  }, []);
+const addDream = (dream) => {
+  setDreams([...dreams, dream]);
+}
 
-  const addDream = (dream) => {
-    setDreams([...dreams, dream]);
-  }
+const removeDream = (id) => {
+  const dreamsToKeep = dreams.filter(dream => dream._id !== id)
+  setDreams(dreamsToKeep);
+}
 
-  const removeDream = (id) => {
-    const dreamsToKeep = dreams.filter(dream => dream._id !== id)
-    setDreams(dreamsToKeep);
-  }
-
-  return (
+return (
     <Router>
     <div className='parent'>
     <Routes>
@@ -41,15 +40,15 @@ const DreamJournalContainer = () => {
     </Routes>
     <footer>
       <div class="footer-container">
-              <Link className='button-50' to="/home">🌠 Dreamscape Diary </Link>
-              <Link className='button-50' to="/addadream">😴 Add A New Dream </Link>
-              <Link className='button-50' to="/dreamjournal">📖 Dream Journal </Link>
-              <Link className='button-50' to="/stats">📊 Dream Statistics </Link>
+        <Link className='button-50' to="/home">🌠 Dreamscape Diary </Link>
+        <Link className='button-50' to="/addadream">😴 Add A New Dream </Link>
+        <Link className='button-50' to="/dreamjournal">📖 Dream Journal </Link>
+        <Link className='button-50' to="/stats">📊 Dream Statistics </Link>
       </div>
     </footer>
     </div>
     </Router>
-      );
+);
 }
 
 export default DreamJournalContainer;

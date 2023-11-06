@@ -1,23 +1,14 @@
-
-
 .homepage-container {
     display: flex;
     background-color: black; 
     color: #979DAC; 
     padding: 20px; 
-
-   
     justify-content: center; 
     align-items: center; 
     height: 100vh; 
-  }
-  
-
-  
-
-
+}
+ 
 .homepage-image {
-
     max-width: fit-content;
 }
 
@@ -26,7 +17,6 @@
     font-family: cursive, sans-serif;
     font-weight: normal; 
     font-size: 1.5em;
-    
     color: #979DAC; 
     text-align: center;
 }
@@ -36,8 +26,3 @@
     color: #979DAC; 
     padding-bottom: 35px;
 }
-
-  
-
-  
-  
