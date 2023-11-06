@@ -1,50 +1,50 @@
 .dreamjournal-container {
-    display: flex;
-    justify-content: space-between;
-    background-color: black; 
-    padding: 4rem;
-    justify-content: center; 
-    max-height: 100vh; 
-    max-width: 100%;
-  }
+  display: flex;
+  justify-content: space-between;
+  background-color: black; 
+  padding: 4rem;
+  justify-content: center; 
+  max-height: 100vh; 
+  max-width: 100%;
+}
 
 .tags-dreamjournal {
-    color: #001233;
-    display: inline;
-    list-style: none;
+  color: #001233;
+  display: inline;
+  list-style: none;
 }
 
 ul.nav {
-    background: linear-gradient(90deg, #0466C8, #0353A4);
-    box-shadow: 1px 1px 2rem #001845(0, 0, 0, 0.3);
-    text-align: center;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5rem 1rem;
-    border-radius: 50px;
-  }
+  background: linear-gradient(90deg, #0466C8, #0353A4);
+  box-shadow: 1px 1px 2rem #001845(0, 0, 0, 0.3);
+  text-align: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 1rem;
+  border-radius: 50px;
+}
 
-  ul.nav > li {
-    display: inline-block;
-    padding: 10px 20px;
-  }
+ul.nav > li {
+  display: inline-block;
+  padding: 10px 20px;
+}
 
-  ul.nav > li:hover {
-    background-color: #2779BF;
-  }
-  
-  ul.nav > li > a {
-    color: white;
-    text-decoration: none;
-  }
+ul.nav > li:hover {
+  background-color: #2779BF;
+}
 
-  .delete-button {
-    width: 100%;
-  }
+ul.nav > li > a {
+  color: white;
+  text-decoration: none;
+}
 
-  @import url("https://fonts.googleapis.com/css2?family=Caprasimo&family=Pacifico&display=swap");
+.delete-button {
+  width: 100%;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Caprasimo&family=Pacifico&display=swap");
 
 * {
   padding: 0;
@@ -63,7 +63,6 @@ html {
   box-shadow: 1px 1px 2rem #0466C8(0, 0, 0, 0.3);
   position: relative;
 }
-
 
 .container_copy {
   padding: 2rem 4rem 5rem 4rem;
@@ -143,7 +142,7 @@ p {
     background-color: black;
   }
 
-  .img_pod {
+.img_pod {
 
-  }
+}
 }

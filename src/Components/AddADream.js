@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { postDream } from "./DreamService"
 import DatePicker from "react-datepicker";
 import './AddADream.css';
-
 import "react-datepicker/dist/react-datepicker.css";
 
 const AddADream = ({ addDream }) => {
@@ -148,9 +147,7 @@ const AddADream = ({ addDream }) => {
         <button className="button-tags"
           type="button"
           onClick={() =>
-            setFormData({ ...formData, isLucidDream: !formData.isLucidDream })
-          }
-        >
+            setFormData({ ...formData, isLucidDream: !formData.isLucidDream })}>
           <span>{formData.isLucidDream ? "✅" : '❌'}</span>
         </button>
       </div>
@@ -163,8 +160,8 @@ const AddADream = ({ addDream }) => {
             setFormData({ ...formData, isNightmare: !formData.isNightmare })}>
           <span>{formData.isNightmare ? '✅' : '❌'}</span>
         </button>
-      
       </div>
+
       <div className="formWrap">
         <label>Recurring:</label>
         <button className="button-tags"
@@ -184,5 +181,6 @@ const AddADream = ({ addDream }) => {
     </form>
   );
 };
+
 export default AddADream;
 
