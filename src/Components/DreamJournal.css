@@ -1,10 +1,10 @@
 .dreamjournal-container {
   display: flex;
   justify-content: space-between;
-  background-color: black; 
+  background-color: black;
   padding: 4rem;
-  justify-content: center; 
-  max-height: 100vh; 
+  justify-content: center;
+  max-height: 100vh;
   max-width: 100%;
 }
 
@@ -18,22 +18,22 @@
 .tags-dreamjournal li {
   margin: 5px;
   padding: 5px;
-  background-color: #7D8597; 
-  border-radius: 5px; 
+  background-color: #7D8597;
+  border-radius: 5px;
 }
 
 .tags-dreamjournal span {
   font-weight: bold;
-  color: #001845; 
+  color: #001845;
   padding: 2px 4px;
   text-transform: uppercase;
   display: inline-block;
 }
 
 .tags-dreamjournal li:hover {
-  background-color: #448acf; 
-  transform: scale(1.1); 
-  transition: all 0.3s ease; 
+  background-color: #448acf;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
 }
 
 
@@ -49,16 +49,16 @@ ul.nav {
   border-radius: 50px;
 }
 
-ul.nav > li {
+ul.nav>li {
   display: inline-block;
   padding: 10px 20px;
 }
 
-ul.nav > li:hover {
+ul.nav>li:hover {
   background-color: #2779BF;
 }
 
-ul.nav > li > a {
+ul.nav>li>a {
   color: white;
   text-decoration: none;
 }
@@ -165,7 +165,5 @@ p {
     background-color: black;
   }
 
-.img_pod {
-
-}
+  .img_pod {}
 }

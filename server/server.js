@@ -8,13 +8,13 @@ app.use(express.json());
 
 MongoClient.connect('mongodb://127.0.0.1:27017', { useUnifiedTopology: true })
     .then((client) => {
-        const db = client.db('dreamscapeDiary'); 
-        const dreamsCollection = db.collection('dreams'); 
-        const dreamsRouter = createRouter(dreamsCollection); 
-        app.use('/api/dreamscapeDiary', dreamsRouter); 
+        const db = client.db('dreamscapeDiary');
+        const dreamsCollection = db.collection('dreams');
+        const dreamsRouter = createRouter(dreamsCollection);
+        app.use('/api/dreamscapeDiary', dreamsRouter);
     })
     .catch(console.error);
-    
+
 app.listen(9000, function () {
     console.log(`Listening on port ${this.address().port}`);
 });

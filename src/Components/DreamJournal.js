@@ -1,14 +1,12 @@
 import React from 'react';
 import DreamCard from './DreamCard';
 
-const DreamJournal = ({dreams, removeDream}) => {
-    const dreamsList = dreams.map((dream) =>{
-        return <DreamCard dream={dream} key={dream._id} removeDream={removeDream} />
+const DreamJournal = ({ dreams, removeDream }) => {
+    const dreamCards = dreams.map((dream) => {
+        return <DreamCard dream={dream} removeDream={removeDream} />
     });
 
-        return (
-            <>{dreamsList}</>
-        );
+    return <>{dreamCards}</>;
 }
 
 export default DreamJournal;

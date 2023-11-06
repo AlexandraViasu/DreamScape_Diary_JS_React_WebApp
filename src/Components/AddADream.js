@@ -85,62 +85,62 @@ const AddADream = ({ addDream }) => {
       </div>
 
       <label className="formWrap">Please choose one of the tags below, if any are applicable.</label>
-      
-       <form className="mchoice">
-          <input
-            className="mchoice"
-            type="checkbox"
-            name="choice"
-            value="hasAnimals"
-            onClick={() => toggleCheckbox("hasAnimals")}
-            checked={formData.hasAnimals}
-          />Animals
 
-          <input
-            className="mchoice"
-            type="checkbox"
-            name="choice"
-            value="hasHumans"
-            onClick={() => toggleCheckbox("hasHumans")}
-            checked={formData.hasHumans}
-          />People
+      <form className="mchoice">
+        <input
+          className="mchoice"
+          type="checkbox"
+          name="choice"
+          value="hasAnimals"
+          onClick={() => toggleCheckbox("hasAnimals")}
+          checked={formData.hasAnimals}
+        />Animals
 
-          <input
-            className="mchoice"
-            type="checkbox"
-            name="choice"
-            value="hasWorkPlace"
-            onClick={() => toggleCheckbox("hasWorkPlace")}
-            checked={formData.hasWorkPlace}
-          />Being at Work
-          
-          <input
-            className="mchoice"
-            type="checkbox"
-            name="choice"
-            value="hasSchool"
-            onClick={() => toggleCheckbox("hasSchool")}
-            checked={formData.hasSchool}
-          />Being at School
-          
-          <input
-            className="mchoice"
-            type="checkbox"
-            name="choice"
-            value="hasFood"
-            onClick={() => toggleCheckbox("hasFood")}
-            checked={formData.hasFood}
-          />Food
-          
-          <input
-            className="mchoice"
-            type="checkbox"
-            name="choice"
-            value="hasHome"
-            onClick={() => toggleCheckbox("hasHome")}
-            checked={formData.hasHome}
-          />Being at Home
-          </form>
+        <input
+          className="mchoice"
+          type="checkbox"
+          name="choice"
+          value="hasHumans"
+          onClick={() => toggleCheckbox("hasHumans")}
+          checked={formData.hasHumans}
+        />People
+
+        <input
+          className="mchoice"
+          type="checkbox"
+          name="choice"
+          value="hasWorkPlace"
+          onClick={() => toggleCheckbox("hasWorkPlace")}
+          checked={formData.hasWorkPlace}
+        />Being at Work
+
+        <input
+          className="mchoice"
+          type="checkbox"
+          name="choice"
+          value="hasSchool"
+          onClick={() => toggleCheckbox("hasSchool")}
+          checked={formData.hasSchool}
+        />Being at School
+
+        <input
+          className="mchoice"
+          type="checkbox"
+          name="choice"
+          value="hasFood"
+          onClick={() => toggleCheckbox("hasFood")}
+          checked={formData.hasFood}
+        />Food
+
+        <input
+          className="mchoice"
+          type="checkbox"
+          name="choice"
+          value="hasHome"
+          onClick={() => toggleCheckbox("hasHome")}
+          checked={formData.hasHome}
+        />Being at Home
+      </form>
 
       <div className="formWrap">
         <label>Lucid Dream:</label>
@@ -173,10 +173,10 @@ const AddADream = ({ addDream }) => {
       </div>
 
       <DatePicker
-      selected={startDate}
-      onChange={(date) => setStartDate(date)}
-      dateFormat="dd MMMM yyyy h:mm a"
-      showTimeInput/>
+        selected={startDate}
+        onChange={(date) => setStartDate(date)}
+        dateFormat="dd MMMM yyyy h:mm a"
+        showTimeInput />
       <input type="submit" value="Save" id="save" />
     </form>
   );
