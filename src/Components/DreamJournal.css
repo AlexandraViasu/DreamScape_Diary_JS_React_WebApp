@@ -101,7 +101,7 @@ html {
   z-index: 10;
   box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
   border-radius: 100%;
-  position: absolute;
+  /* position: absolute; */
   left: -10%;
   top: -13%;
   display: flex;
@@ -142,7 +142,7 @@ p {
 .btn_primary {
   border: none;
   outline: none;
-  position: absolute;
+  /* position: absolute; */
   right: 10%;
   bottom: 1%;
   /* display: flex; */
