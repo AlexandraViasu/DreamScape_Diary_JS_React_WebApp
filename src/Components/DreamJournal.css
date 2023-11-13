@@ -1,10 +1,10 @@
 .dreamjournal-container {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   background-color: black;
   padding: 4rem;
   justify-content: center;
-  max-height: 100vh;
+  max-height: flex;
   max-width: 100%;
 }
 
@@ -85,9 +85,12 @@ html {
   border-radius: 10px;
   box-shadow: 1px 1px 2rem #0466C8(0, 0, 0, 0.3);
   position: relative;
+  justify-content: flex;
 }
 
 .container_copy {
+  /* height: flex; */
+  min-height: 100%;
   padding: 2rem 4rem 5rem 4rem;
 }
 
@@ -142,7 +145,7 @@ p {
   position: absolute;
   right: 10%;
   bottom: 1%;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
   background: linear-gradient(90deg, #873c3c, #790002);
