@@ -1,6 +1,6 @@
 .dreamjournal-container {
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   background-color: black;
   padding: 4rem;
   justify-content: center;
@@ -81,6 +81,7 @@ html {
 
 .blog_post {
   background: #979DAC;
+  /* display: flex; */
   max-width: 500px;
   border-radius: 10px;
   box-shadow: 1px 1px 2rem #0466C8(0, 0, 0, 0.3);
@@ -89,7 +90,7 @@ html {
 }
 
 .container_copy {
-  /* height: flex; */
+  height: flex;
   min-height: 100%;
   padding: 2rem 4rem 2rem 4rem;
 }
@@ -101,10 +102,12 @@ html {
   z-index: 10;
   box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
   border-radius: 100%;
-  /* position: absolute; */
-  left: -10%;
-  top: -13%;
-  display: flex;
+  position: absolute;
+  top: -38px; left: -55px;
+  /* left: -10%; */
+  /* top: -13%; */
+  /* bottom: 26rem; */
+  display: grid;
   align-items: center;
   justify-content: center;
 }
