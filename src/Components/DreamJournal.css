@@ -103,7 +103,8 @@ html {
   box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
   border-radius: 100%;
   position: absolute;
-  top: -38px; left: -55px;
+  top: -38px;
+  left: -55px;
   /* left: -10%; */
   /* top: -13%; */
   /* bottom: 26rem; */
@@ -173,3 +174,21 @@ p {
 
   .img_pod {}
 }
+
+.dreamjournal-title {
+  text-align: center;
+  color: #979DAC;
+  margin-top: 20px;
+}
+
+.dreamjournal-p {
+  padding-left: 10%;
+  padding-right: 10%;
+  font-family: cursive, sans-serif;
+  font-weight: normal;
+  font-size: 2rem;
+  color: #979DAC;
+  text-align: center;
+  display: flex;
+}
+

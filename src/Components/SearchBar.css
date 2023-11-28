@@ -1,0 +1,25 @@
+.searchbar {
+    background-color: #002855;
+    max-width: 80%;
+    padding: 8px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+
+}
+
+.searchbarcomponent {
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+}
+
+.searchbarbutton {
+    background-color: #002855;
+    width: 8%;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+    padding-bottom: 10px;
+}
