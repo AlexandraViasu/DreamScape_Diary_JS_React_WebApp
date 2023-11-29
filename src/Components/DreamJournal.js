@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import DreamCard from './DreamCard';
 import SearchBar from './SearchBar';
+import TagFilter from './TagFilter';
 import './DreamJournal.css';
 
 const DreamJournal = ({ dreams, removeDream, content }) => {
   const [searchTerm, setSearchTerm] = useState('');
+  const [filter, setFilter] = useState('All');
 
   const onSearch = (term) => {
     setSearchTerm(term);
@@ -62,6 +64,8 @@ const DreamJournal = ({ dreams, removeDream, content }) => {
       <div>
         <p>{highlightText(content.title, searchTerm)}</p>
       </div>
+      <TagFilter filter={filter} setFilter={setFilter} />
+      <div>{filterList}</div>
       <>{dreamCards}</>
     </>
   );
