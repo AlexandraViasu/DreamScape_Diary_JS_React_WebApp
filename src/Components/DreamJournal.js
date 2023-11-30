@@ -4,7 +4,7 @@ import SearchBar from './SearchBar';
 import TagFilter from './TagFilter';
 import './DreamJournal.css';
 
-const DreamJournal = ({ dreams, removeDream, content }) => {
+const DreamJournal = ({ dreams, removeDream, content, FILTER_MAP, filterList }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [filter, setFilter] = useState('All');
 
@@ -12,13 +12,29 @@ const DreamJournal = ({ dreams, removeDream, content }) => {
     setSearchTerm(term);
   };
 
-  const filteredDreams = dreams.filter((dream) =>
-    dream.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const tagMatch = (dream) => {
+    const tagCheckFunction = FILTER_MAP[filter];
+    if (!filter) {
+      console.error("Filter is undefined");
+      return false;
+    }
+    return filter === 'All' || (tagCheckFunction && tagCheckFunction(dream));
+  };
+  
 
-  const dreamCards = filteredDreams.map((dream) => {
-    return <DreamCard dream={dream} removeDream={removeDream} searchTerm={searchTerm} />;
-  });
+  const filteredDreams = dreams
+    .filter((dream) =>
+      dream.title.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    .filter(tagMatch);
+
+  // const dreamCards = filteredDreams.map((dream) => (
+  //   <DreamCard key={dream.id} dream={dream} removeDream={removeDream} searchTerm={searchTerm} />
+  // ));
+
+  const dreamCards = filteredDreams.map((dream, index) => (
+    <DreamCard key={index} dream={dream} removeDream={removeDream} searchTerm={searchTerm} />
+  ));
 
   if (!content) return null;
 
@@ -42,6 +58,10 @@ const DreamJournal = ({ dreams, removeDream, content }) => {
     );
   };
 
+  console.log("All Dreams:", dreams);
+  console.log("Current Filter:", filter);
+  console.log("Filtered Dreams:", filteredDreams);
+
   return (
     <>
       <h1 className="dreamjournal-title">Your Dream Journal entries 📜</h1>
@@ -60,13 +80,13 @@ const DreamJournal = ({ dreams, removeDream, content }) => {
         navigate through the landscapes of your mind, one dream at a time."
       </p>
 
+      
       <SearchBar term={searchTerm} onSearch={onSearch} />
       <div>
         <p>{highlightText(content.title, searchTerm)}</p>
       </div>
       <TagFilter filter={filter} setFilter={setFilter} />
-      <div>{filterList}</div>
-      <>{dreamCards}</>
+      {dreamCards}
     </>
   );
 };
